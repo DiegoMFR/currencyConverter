@@ -1,0 +1,65 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #abc6e0;
+  margin: 5px;
+  border-radius: 5px;
+  align-items: center;
+  color: #333;
+  --input-length: 3ch;
+  position: relative;
+}
+
+:host input {
+  flex-grow: 1;
+  width: var(--input-length);
+  min-width: 3ch;
+  background-color: #99bbee;
+  padding: 5px;
+  border-radius: 0 4px 4px 0;
+  border:none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -moz-appearance: textfield;
+  box-shadow: none;
+  outline: none;
+  transition: width 0.2s;
+  color: #333;
+}
+
+:host input::-webkit-outer-spin-button,
+:host input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:host label {
+  padding: 5px;
+  background-color: #b8ccdd;
+  border-radius: 0 4px 4px 0;
+}
+
+:host .remove {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  border: 1px solid #abc6e0;
+  right: -7px;
+  top: -7px;
+  cursor: pointer;
+  line-height: 13px;
+  text-align: center;
+  font-weight: 100;
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0.2s,opacity 0.2s;
+}
+
+:host(:hover) .remove {
+  visibility:visible;
+  opacity:1;
+}

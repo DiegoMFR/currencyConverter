@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: 5px;
+  color: #333;
+}
+
+currency-item:not(:first-of-type){
+  margin-left: 15px;
+}
+
+currency-item:not(:first-of-type):before {
+  content: '=';
+  position: absolute;
+  margin-left: -15px;
+  color: #abc6e0;
+  font-weight: 100;
+}
+
+.currency-selector {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: #eee;
+  color: #ccc;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.currency-selector:hover {
+  color: #333;
+  background-color: #b8ccdd;
+}
+
+.currency-selector select {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  color: inherit;
+  cursor: pointer;
+}
+
+.currency-selector label {
+  padding: 5px 0 5px 5px;
+}
