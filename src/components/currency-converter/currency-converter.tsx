@@ -1,12 +1,12 @@
 import { Component, h, Element } from '@stencil/core';
 
 @Component({
-  tag: 'app-root',
-  styleUrl: 'app-root.css',
+  tag: 'currency-converter',
+  styleUrl: 'currency-converter.css',
   shadow: true,
 })
-export class AppRoot {
-  @Element() el: HTMLAppRootElement;
+export class CurrencyConverter {
+  @Element() el: HTMLCurrencyConverterElement;
   render() {
     return (
       <host>

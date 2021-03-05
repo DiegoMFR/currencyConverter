@@ -1,9 +1,9 @@
 :host {
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
-  margin: 5px;
-  color: #333;
+  padding: var(--base-spacing);
+  margin: var(--base-spacing);
+  color: var(--main-text-color);
 }
 
 currency-item:not(:first-of-type){
@@ -14,29 +14,29 @@ currency-item:not(:first-of-type):before {
   content: '=';
   position: absolute;
   margin-left: -15px;
-  color: #abc6e0;
+  color: var(--light-decoration-color);
   font-weight: 100;
 }
 
 .currency-selector {
   display: flex;
   align-items: center;
-  border-radius: 5px;
-  margin: 5px;
-  background-color: #eee;
-  color: #ccc;
-  transition: background-color 0.2s, color 0.2s;
+  border-radius: var(--base-border-radius);
+  margin: var(--base-spacing);
+  background-color: var(--light-background);
+  color: var(--light-text-color);
+  transition: background-color var(--transition-time), color var(--transition-time);
 }
 
 .currency-selector:hover {
-  color: #333;
-  background-color: #b8ccdd;
+  color: var(--main-text-color);
+  background-color: var(--main-background);
 }
 
 .currency-selector select {
   background: transparent;
   border: none;
-  padding: 5px;
+  padding: var(--base-spacing);
   border-radius: 0 4px 4px 0;
   outline: none;
   -webkit-appearance: none;
@@ -48,5 +48,5 @@ currency-item:not(:first-of-type):before {
 }
 
 .currency-selector label {
-  padding: 5px 0 5px 5px;
+  padding: var(--base-spacing) 0 var(--base-spacing) var(--base-spacing);
 }

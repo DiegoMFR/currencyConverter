@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppRoot {
+    interface CurrencyConverter {
     }
     interface CurrencyItem {
         "rate": number;
@@ -20,11 +20,11 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    interface HTMLCurrencyConverterElement extends Components.CurrencyConverter, HTMLStencilElement {
     }
-    var HTMLAppRootElement: {
-        prototype: HTMLAppRootElement;
-        new (): HTMLAppRootElement;
+    var HTMLCurrencyConverterElement: {
+        prototype: HTMLCurrencyConverterElement;
+        new (): HTMLCurrencyConverterElement;
     };
     interface HTMLCurrencyItemElement extends Components.CurrencyItem, HTMLStencilElement {
     }
@@ -39,13 +39,13 @@ declare global {
         new (): HTMLExchangeDisplayElement;
     };
     interface HTMLElementTagNameMap {
-        "app-root": HTMLAppRootElement;
+        "currency-converter": HTMLCurrencyConverterElement;
         "currency-item": HTMLCurrencyItemElement;
         "exchange-display": HTMLExchangeDisplayElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppRoot {
+    interface CurrencyConverter {
     }
     interface CurrencyItem {
         "onBaseChange"?: (event: CustomEvent<any>) => void;
@@ -60,7 +60,7 @@ declare namespace LocalJSX {
         "symbols"?: Array<string>;
     }
     interface IntrinsicElements {
-        "app-root": AppRoot;
+        "currency-converter": CurrencyConverter;
         "currency-item": CurrencyItem;
         "exchange-display": ExchangeDisplay;
     }
@@ -69,7 +69,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "currency-converter": LocalJSX.CurrencyConverter & JSXBase.HTMLAttributes<HTMLCurrencyConverterElement>;
             "currency-item": LocalJSX.CurrencyItem & JSXBase.HTMLAttributes<HTMLCurrencyItemElement>;
             "exchange-display": LocalJSX.ExchangeDisplay & JSXBase.HTMLAttributes<HTMLExchangeDisplayElement>;
         }

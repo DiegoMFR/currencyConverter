@@ -1,21 +1,22 @@
 :host {
   display: flex;
   flex-direction: row;
-  border: 1px solid #abc6e0;
-  margin: 5px;
-  border-radius: 5px;
+  border: 1px solid var(--main-background);
+  margin: var(--base-spacing);
+  border-radius: var(--base-border-radius);
   align-items: center;
-  color: #333;
+  color: var(--main-text-color);
   --input-length: 3ch;
   position: relative;
 }
 
 :host input {
+  font-family: 'Roboto', sans-serif;
   flex-grow: 1;
   width: var(--input-length);
   min-width: 3ch;
-  background-color: #99bbee;
-  padding: 5px;
+  background-color: var(--main-background);
+  padding: var(--base-spacing);
   border-radius: 0 4px 4px 0;
   border:none;
   background-image:none;
@@ -25,8 +26,8 @@
   -moz-appearance: textfield;
   box-shadow: none;
   outline: none;
-  transition: width 0.2s;
-  color: #333;
+  transition: width var(--transition-time);
+  color: var(--main-text-color);
 }
 
 :host input::-webkit-outer-spin-button,
@@ -36,8 +37,8 @@
 }
 
 :host label {
-  padding: 5px;
-  background-color: #b8ccdd;
+  padding: var(--base-spacing);
+  background-color: var(--main-background);
   border-radius: 0 4px 4px 0;
 }
 
@@ -47,7 +48,8 @@
   border-radius: 50%;
   position: absolute;
   background: white;
-  border: 1px solid #abc6e0;
+  border: 1px solid var(--main-background);
+  color: var(--light-decoration-color);
   right: -7px;
   top: -7px;
   cursor: pointer;
@@ -56,7 +58,7 @@
   font-weight: 100;
   visibility:hidden;
   opacity:0;
-  transition:visibility 0.2s,opacity 0.2s;
+  transition:visibility var(--transition-time),opacity var(--transition-time);
 }
 
 :host(:hover) .remove {
