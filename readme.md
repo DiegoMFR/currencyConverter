@@ -1,6 +1,7 @@
 # Currency Converter
 
 Simple , lightweight currency converter widget.
+It is capable of converting among many currencies at the same time, just add all currencies you want, and change any value to see the corresponding exchange in the rest of the chosen symbols.
 
 ## Getting Started
 
