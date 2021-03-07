@@ -31,11 +31,12 @@ export class ExchangeDisplay {
     const chosenSymbol = e.target.value;
     this.selectedSymbols.push(chosenSymbol);
     this.symbols = this.symbols.filter(item => item !== chosenSymbol);
+    e.target.selectedIndex = 0;
   }
 
   private renderCurrencySelect = () => <span class="currency-selector">
-    <label htmlFor="currencySelect">to:</label>
-    <select id="currencySelect" onChange={this.addAnotherCurrency}>
+    <select onChange={this.addAnotherCurrency}>
+      <option disabled selected hidden>To...</option>
       {this.symbols.map(curr =>
         <option value={curr}>{curr}</option>
       )}

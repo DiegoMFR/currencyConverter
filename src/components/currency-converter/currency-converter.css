@@ -1,4 +1,6 @@
 :host {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family);
+  color: var(--main-text-color);
 }
