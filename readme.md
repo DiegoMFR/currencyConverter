@@ -1,41 +1,95 @@
-# Stencil App Starter
+# Currency Converter
 
-Stencil is a compiler for building fast web apps using Web Components.
-
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
-
-Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is certainly not required.
-
-Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
+Simple , lightweight currency converter widget.
 
 ## Getting Started
 
-To start a new project using Stencil, clone this repo to a new directory:
+Download or clone the repo to your project, and import /build/currencyconverter.esm.js (ES module), /build/currencyconverter.js (nomodule version) and /build/currencyconverter.css into your HTML.
+
+### Prerequisites
+
+None :)
+
+### Installing
+
+- Create a folder in your project and clone the repo
 
 ```bash
-npm init stencil app
+cd my-currency-converter-folder
+git clone https://github.com/DiegoMFR/currencyConverter.git
 ```
 
-and run:
+- Import the files in the build folder into your HTML (see the included index.html for further reference)
+
+```html
+<head>
+  ...
+ <script type="module" src="/build/currencyconverter.esm.js"></script>
+ <script nomodule src="/build/currencyconverter.js"></script>
+ <link href="/build/currencyconverter.css" rel="stylesheet">
+  ...
+</head>
+```
+---
+**NOTE**
+
+```currencyconverter.css``` contains the starter theme CSS vars, you can use them to customize your implementation :)
+
+---
+
+
+- Add the ```<currency-converter>``` tag to your body
+
+```html
+<div class="my-currencies">
+    <h2> Currency converter: </h2>
+    <currency-converter></currency-converter>
+</div>
+```
+
+Live demo: https://sad-kilby-8ede80.netlify.app/
+
+
+# Project Settings
+
+### Here's a brief explanation on how to clone and run the project on your local environment.
+
+Clone and install dependencies
+
+```bash
+https://github.com/DiegoMFR/currencyConverter.git
+npm i
+```
+
+Run development build in watch mode
 
 ```bash
 npm start
 ```
 
-To build the app for production, run:
+Run production build
 
 ```bash
 npm run build
 ```
 
-To run the unit tests once, run:
+Run tests
 
-```
-npm test
+```bash
+npm run test
 ```
 
-To run the unit tests and watch for file changes during development, run:
 
-```
-npm run test.watch
-```
+## Built With
+
+* [Stenciljs](https://stenciljs.com/) - Web components generator.
+* [WebComponents](https://www.webcomponents.org/) - Web platform API for custom elements creation.
+
+## Versioning
+
+[Git](https://git-scm.com/) - [NPM](https://www.npmjs.com/).
+
+## Author
+
+**Diego Morales** [Linkedin](www.linkedin.com/in/diegomfr)
+
