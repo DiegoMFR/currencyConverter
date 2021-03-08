@@ -5,7 +5,7 @@ It is capable of converting among many currencies at the same time, just add all
 
 ## Getting Started
 
-Download or clone the repo to your project, build it and import /build/currencyconverter.esm.js (ES module), /build/currencyconverter.js (nomodule) and /build/currencyconverter.css into your HTML.
+Download or clone the repo to your project, build it and import /build/currencyconverter.esm.js (ES module), /build/currencyconverter.js (nomodule) and /build/currencyconverter.css into your project.
 
 ### Prerequisites
 
@@ -21,7 +21,7 @@ cd my-currency-converter-folder
 git clone https://github.com/DiegoMFR/currencyConverter.git
 ```
 
-- Import the files in the build folder into your HTML (see the included index.html for further reference)
+- Import the files in the build folder into your JS or HTML (see the included index.html for further reference)
 
 ```html
 <head>
